@@ -1,0 +1,23 @@
+{
+  "name": "passplum-tweet-phrase",
+  "version": "1.0.0",
+  "description": "Tweet phrases from passplum.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/maxbeatty/passplum-tweet-phrase"
+  },
+  "keywords": [
+    "passplum",
+    "passphrase",
+    "twitter"
+  ],
+  "author": "Max Beatty",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.64.0"
+  }
+}

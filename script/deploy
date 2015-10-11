@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+dir=`dirname $0`
+
+mkdir -p $dir/../.tmp
+
+zip -r $dir/../.tmp/lambda.zip node_modules/
+
+cp $dir/../index.js $dir/../.tmp/
+
+cd $dir/../.tmp/
+
+sed -i '' "s#process.env.PASSPLUM_URL#'$PASSPLUM_URL'#" index.js
+sed -i '' "s#process.env.TWITTER_CONSUMER_KEY#'$TWITTER_CONSUMER_KEY'#" index.js
+sed -i '' "s#process.env.TWITTER_CONSUMER_SECRET#'$TWITTER_CONSUMER_SECRET'#" index.js
+sed -i '' "s#process.env.TWITTER_ACCESS_TOKEN#'$TWITTER_ACCESS_TOKEN'#" index.js
+sed -i '' "s#process.env.TWITTER_ACCESS_SECRET#'$TWITTER_ACCESS_SECRET'#" index.js
+
+zip -g lambda.zip index.js
+
+cd ..

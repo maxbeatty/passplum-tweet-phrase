@@ -8,7 +8,7 @@
 
 ## environment
 
-_Use Node v0.10.36 to match AWS Lambda (`nvm use`)_
+_Use Node v4.3.2 to match AWS Lambda Node.js 4.3 (`nvm use`)_
 
 ### variables
 
